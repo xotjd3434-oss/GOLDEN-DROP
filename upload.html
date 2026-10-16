@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>위스키 등록 | GOLDEN DROP</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/upload.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="container nav" aria-label="메인 메뉴"><a href="index.html" class="logo">GOLDEN DROP</a>
+      <div class="gnb"><a href="index.html">HOME</a><a href="whisky.html">WHISKY</a><a href="journal.html">JOURNAL</a><a
+          href="guide.html">GUIDE</a><span id="account-nav"><a href="login.html">로그인</a></span></div>
+    </nav>
+  </header>
+  <main class="container section whisky-upload">
+    <div class="admin-heading"><a href="whisky.html">← 컬렉션으로 돌아가기</a><span>GOLDEN DROP ADMIN</span></div>
+    <div class="admin-layout">
+      <aside class="admin-aside">
+        <p class="sub-title">NEW WHISKY</p>
+        <h2>한 병의 이야기를<br>더하세요.</h2>
+        <p>제품 정보와 이미지를 확인한 뒤<br>등록해 주세요.</p>
+        <ol>
+          <li>기본 정보 입력</li>
+          <li>제품 이미지 선택</li>
+          <li>컬렉션에 등록</li>
+        </ol><small>가격은 원 단위 숫자로 입력합니다.<br>분류는 컬렉션 필터에 함께 반영됩니다.</small>
+      </aside>
+      <div class="form-box">
+        <p class="eyebrow">COLLECTION / ADMIN</p>
+        <h1>컬렉션 관리</h1>
+        <p class="muted">운영자가 직접 선정한 한 병을 컬렉션에 추가합니다.</p>
+        <p id="admin-status" role="status">운영자 권한을 확인하고 있습니다.</p>
+        <form id="upload-form" hidden>
+          <div class="upload-field">
+            <label for="title">위스키 이름</label>
+            <input id="title" name="title" placeholder="예: Ardbeg Uigeadail" required maxlength="100">
+          </div>
+          <div class="upload-field">
+            <label for="brand">브랜드</label>
+            <input id="brand" name="brand" placeholder="예: Ardbeg" required maxlength="100">
+          </div>
+          <div class="upload-field">
+            <label for="category">카테고리</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>카테고리를 선택해 주세요</option>
+              <option value="싱글몰트 스카치">싱글몰트 스카치</option>
+              <option value="블렌디드 스카치">블렌디드 스카치</option>
+              <option value="버번">버번</option>
+              <option value="싱글몰트 재패니즈">싱글몰트 재패니즈</option>
+              <option value="블렌디드 재패니즈">블렌디드 재패니즈</option>
+              <option value="블렌디드 위스키">블렌디드 위스키</option>
+            </select>
+          </div>
+          <div class="upload-field">
+            <label for="origin">원산지</label>
+            <input id="origin" name="origin" placeholder="예: 스코틀랜드 · 아일라" required maxlength="100">
+          </div>
+          <div class="upload-field">
+            <label for="price">가격 (원)</label>
+            <input id="price" name="price" type="number" min="0" step="1" placeholder="예: 184900" required>
+          </div>
+          <div class="upload-field">
+            <label for="volume-ml">용량 (ml)</label>
+            <input id="volume-ml" name="volume_ml" type="number" min="1" step="1" placeholder="예: 700" required>
+          </div>
+          <div class="upload-field upload-wide">
+            <label for="description">상품 설명</label>
+            <textarea id="description" name="description" rows="5" placeholder="위스키의 향과 맛, 숙성 방식 등을 입력해 주세요."
+              required></textarea>
+          </div>
+          <div class="upload-field upload-wide">
+            <label for="image">위스키 사진</label>
+            <input id="image" name="image" type="file" accept="image/jpeg,image/png,image/webp" required
+              aria-describedby="image-help">
+            <p id="image-help" class="upload-help">JPG, PNG, WEBP · 최대 3MB</p>
+            <img id="preview" alt="선택한 위스키 이미지 미리보기" hidden>
+          </div>
+          <button class="upload-submit upload-wide" type="submit">위스키 등록하기 <span aria-hidden="true">→</span></button>
+          <p id="upload-message" class="upload-wide" aria-live="polite"></p>
+        </form><a id="upload-success" class="text-link" href="whisky.html" hidden>등록한 컬렉션 확인 →</a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">GOLDEN DROP · 취향을 담은 한 잔</div>
+  </footer>
+  <script type="module" src="./js/upload.js"></script>
+</body>
+
+</html>

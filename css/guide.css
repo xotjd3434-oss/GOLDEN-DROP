@@ -1,0 +1,294 @@
+.editorial-page {
+  padding-top: 165px;
+  max-width: 1240px;
+}
+
+.guide-hero {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+  padding: 35px 0 65px;
+}
+
+.guide-hero h1 {
+  font-size: clamp(36px, 4.8vw, 66px);
+  line-height: 1.3;
+  letter-spacing: -2px;
+  margin: 20px 0 25px;
+  font-weight: 500;
+}
+
+.guide-lead {
+  color: var(--muted);
+  line-height: 1.9;
+}
+
+.text-link {
+  display: inline-flex;
+  gap: 60px;
+  color: var(--accent-light);
+  border-bottom: 1px solid var(--accent);
+  padding: 18px 0;
+  text-decoration: none;
+}
+
+.guide-art {
+  height: 370px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  background: radial-gradient(ellipse at center, #68533255, transparent 70%);
+}
+
+.guide-art>span {
+  font: 12px/1.6 Georgia, serif;
+  letter-spacing: 4px;
+  text-align: center;
+  color: var(--accent);
+  margin-top: 30px;
+}
+
+.glass {
+  position: relative;
+  width: 135px;
+  height: 155px;
+  border: 1px solid #d5c3a180;
+  border-top: 2px solid #e5cd9d;
+  border-radius: 8px 8px 35px 35px;
+  transform: rotate(-9deg);
+  background: linear-gradient(100deg, #ffffff12, transparent 40%, #ffffff18);
+  box-shadow: 18px 25px 50px #0005;
+  overflow: hidden;
+}
+
+.glass i {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  right: 8px;
+  height: 70px;
+  background: linear-gradient(#b77824aa, #6e350d);
+  border-radius: 0 0 26px 26px;
+  border-top: 1px solid #f5bc69;
+}
+
+.guide-index {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.guide-index a {
+  padding: 22px;
+  color: var(--ink);
+  text-decoration: none;
+  border-right: 1px solid var(--line);
+  font-size: 14px;
+}
+
+.guide-index a:last-child {
+  border: 0;
+}
+
+.guide-index a:hover {
+  color: var(--accent-light);
+  background: #ffffff04;
+}
+
+.guide-block {
+  padding: 75px 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 30px;
+}
+
+.section-heading h2 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.45;
+  margin: 10px 0 14px;
+}
+
+.section-heading>p:last-child {
+  color: var(--muted);
+}
+
+.flavour-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  margin-top: 35px;
+}
+
+.flavour-grid article {
+  background: var(--paper);
+  padding: 32px 23px;
+}
+
+.flavour-symbol {
+  font-size: 42px;
+  color: var(--accent);
+  display: block;
+  margin-bottom: 35px;
+}
+
+.flavour-grid h3,
+.service-grid h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.flavour-grid article>p:last-child,
+.service-grid p,
+.ritual-list p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: var(--muted);
+  word-break: keep-all;
+}
+
+.ritual-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+}
+
+.ritual-list article {
+  display: flex;
+  gap: 30px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.ritual-list article:first-child {
+  padding-top: 0;
+}
+
+.ritual-list article:last-child {
+  border: 0;
+}
+
+.ritual-list article>span {
+  color: var(--accent);
+  font: italic 24px Georgia, serif;
+}
+
+.ritual-list h3 {
+  margin: 0;
+  font: 26px Georgia, serif;
+}
+
+.ritual-list small {
+  font: 12px Pretendard, sans-serif;
+  color: var(--muted);
+  margin-left: 12px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 35px;
+}
+
+.service-grid b {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+.guide-faq {
+  margin-top: 40px;
+}
+
+.guide-faq details {
+  border-top: 1px solid var(--line);
+  padding: 20px 0;
+}
+
+.guide-faq summary {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.guide-faq p {
+  color: var(--muted);
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+.guide-end {
+  text-align: center;
+  padding: 60px 0;
+}
+
+.guide-end>p {
+  font-size: 22px;
+  margin-bottom: 25px;
+}
+
+.guide-end small {
+  display: block;
+  color: var(--muted);
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+@media(max-width:760px) {
+  .editorial-page {
+    padding-top: 165px;
+  }
+
+  .guide-hero {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-top: 0;
+  }
+
+  .guide-art {
+    height: 240px;
+  }
+
+  .guide-index a {
+    padding: 18px 8px;
+    font-size: 11px;
+  }
+
+  .flavour-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ritual-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .guide-block {
+    padding: 45px 0;
+  }
+
+  .section-heading h2 {
+    font-size: 27px;
+  }
+
+  .flavour-grid article {
+    padding: 24px 16px;
+  }
+
+  .flavour-symbol {
+    margin-bottom: 20px;
+  }
+
+  .guide-end>p {
+    font-size: 18px;
+  }
+}

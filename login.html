@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="위스키 한 잔에 담긴 깊은 풍미와 이야기. GOLDEN DROP에서 다양한 위스키와 취향에 맞는 가이드를 만나보세요.">
+  <title>GOLDEN DROP | 취향을 담은 한 잔</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/login.css">
+  <script type="module" src="./js/login.js"></script>
+</head>
+
+<body class="login-page">
+  <header class="login-header">
+    <a href="index.html" class="logo">GOLDEN DROP</a>
+    <a href="index.html" class="home-link">홈으로 돌아가기 →</a>
+  </header>
+  <main class="wrapper">
+    <section class="login-section" aria-labelledby="login-title">
+      <div class="login-intro">
+        <p class="eyebrow">A DROP OF DISTINCTION</p>
+        <p>당신의 취향이 깊어지는 순간.</p>
+      </div>
+      <!-- From Uiverse.io by Smit-Prajapati, adapted for GOLDEN DROP -->
+      <form id="login-form" class="form">
+        <div class="form-heading">
+          <h1 id="login-title" class="title">LOGIN</h1>
+          <p id="form-description">골든 드롭에 오신 것을 환영합니다.</p>
+        </div>
+        <div class="form-fields">
+          <div class="field">
+            <label for="email">이메일</label>
+            <div class="input-container">
+              <span class="field-icon" aria-hidden="true">✉</span>
+              <input class="input" type="email" id="email" name="email" placeholder="이메일을 입력하세요" autocomplete="username"
+                autocapitalize="none" spellcheck="false" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="password">비밀번호</label>
+            <div class="input-container">
+              <span class="field-icon password-icon" aria-hidden="true">⚿</span>
+              <input class="input" type="password" id="password" name="password" placeholder="비밀번호를 입력하세요"
+                autocomplete="current-password" required>
+              <button type="button" id="password-toggle" class="password-toggle" aria-controls="password"
+                aria-label="비밀번호 표시" aria-pressed="false">
+                <span class="eye-icon" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+          <div id="confirm-field" class="field" hidden>
+            <label for="password-confirm">비밀번호 확인</label>
+            <div class="input-container">
+              <span class="field-icon password-icon" aria-hidden="true">⚿</span>
+              <input class="input" type="password" id="password-confirm" name="password-confirm"
+                placeholder="비밀번호를 다시 입력하세요" autocomplete="new-password" disabled>
+            </div>
+            <p class="password-guide">비밀번호는 8자 이상 입력해 주세요.</p>
+          </div>
+        </div>
+        <div class="login-button">
+          <button type="submit" id="login-btn">로그인</button>
+        </div>
+        <p id="login-status" class="login-status" role="status" aria-live="polite" aria-atomic="true"></p>
+        <div class="auth-switch">
+          <span id="switch-description">아직 회원이 아니신가요?</span>
+          <button type="button" id="auth-switch-btn" aria-controls="confirm-field" aria-expanded="false">
+            회원가입
+          </button>
+        </div>
+        <div class="form-bottom">
+          <a href="index.html">컬렉션 둘러보기 →</a>
+        </div>
+        <div class="texture" aria-hidden="true"></div>
+      </form>
+      <p class="login-caption">한 잔에 담긴 풍미, 나만의 취향으로.</p>
+    </section>
+  </main>
+  <footer class="login-footer">
+    <p>&copy; 2026 GOLDEN DROP.</p>
+    <p>포트폴리오용 위스키 소개 사이트입니다.</p>
+  </footer>
+</body>
+
+</html>

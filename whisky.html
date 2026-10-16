@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GOLDEN DROP 위스키 컬렉션. 다양한 위스키를 살펴보고 나만의 취향을 발견해 보세요.">
+  <title>WHISKY | GOLDEN DROP</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/whisky.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script type="module" src="./js/whisky.js"></script>
+</head>
+
+<body class="whisky-page">
+  <header class="header">
+    <nav class="container nav" aria-label="메인 메뉴">
+      <a href="index.html" class="logo">GOLDEN DROP</a>
+      <div class="gnb">
+        <a href="index.html">HOME</a>
+        <a href="whisky.html" aria-current="page">WHISKY</a>
+        <a href="journal.html">JOURNAL</a>
+        <a href="guide.html">GUIDE</a>
+        <span id="account-nav">
+          <a href="login.html">로그인</a>
+        </span>
+      </div>
+    </nav>
+  </header>
+  <main class="container collection-page" aria-labelledby="page-title">
+    <nav class="collection-breadcrumb" aria-label="현재 위치">
+      <a href="index.html">HOME</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">WHISKY</span>
+    </nav>
+    <section class="collection-heading" aria-labelledby="page-title">
+      <div>
+        <p class="sub-title">GOLDEN DROP COLLECTION</p>
+        <h1 id="page-title">
+          당신의 취향을 담은<br>
+          위스키 컬렉션.
+        </h1>
+      </div>
+    </section>
+    <div class="whisky-toolbar" role="search" aria-label="위스키 검색과 분류">
+      <div class="search-field">
+        <label for="search">위스키 검색</label>
+        <div class="search-control">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="10.5" cy="10.5" r="6.5"></circle>
+            <path d="m16 16 4 4"></path>
+          </svg>
+          <input type="search" id="search" name="search" placeholder="찾고 싶은 위스키 이름을 입력하세요" autocomplete="off">
+        </div>
+      </div>
+      <div class="category-field">
+        <label for="category">위스키 분류</label>
+        <select name="category" id="category">
+          <option value="">전체 위스키</option>
+          <option value="싱글몰트 스카치">싱글몰트 스카치</option>
+          <option value="블렌디드 스카치">블렌디드 스카치</option>
+          <option value="버번">버번</option>
+          <option value="싱글몰트 재패니즈">싱글몰트 재패니즈</option>
+          <option value="블렌디드 재패니즈">블렌디드 재패니즈</option>
+          <option value="블렌디드 위스키">블렌디드 위스키</option>
+        </select>
+      </div>
+    </div>
+    <p class="collection-hint">
+      위스키 카드를 선택하면 상세 정보를 확인할 수 있습니다.
+    </p>
+    <section class="collection-results" aria-labelledby="list-title">
+      <div class="results-heading">
+        <h2 id="list-title">위스키 컬렉션</h2>
+        <p>한 병에 담긴 풍미와 이야기를 만나보세요.</p>
+      </div>
+      <p id="result-count"></p>
+      <div id="art-list"></div>
+      <div id="whisky-list" class="grid whisky-grid" aria-live="polite">
+        <p class="list-message">위스키를 불러오는 중...</p>
+      </div>
+      <div class="more-wrap">
+        <button id="more-btn" type="button" hidden>
+          위스키 더보기
+        </button>
+      </div>
+    </section>
+  </main>
+  <dialog id="whisky-modal" class="whisky-modal" aria-labelledby="modal-title">
+    <button type="button" id="modal-close" class="modal-close" aria-label="상세 정보 닫기" autofocus>
+      ×
+    </button>
+    <div class="whisky-modal-layout">
+      <div id="modal-image" class="modal-image"></div>
+      <div class="modal-body">
+        <p class="sub-title">WHISKY DETAILS</p>
+        <h2 id="modal-title"></h2>
+        <p id="modal-brand" class="modal-brand"></p>
+        <strong id="modal-price" class="modal-price"></strong>
+        <dl class="modal-specs">
+          <div>
+            <dt>원산지</dt>
+            <dd id="modal-origin"></dd>
+          </div>
+          <div>
+            <dt>분류</dt>
+            <dd id="modal-type"></dd>
+          </div>
+          <div>
+            <dt>용량</dt>
+            <dd id="modal-volume"></dd>
+          </div>
+        </dl>
+        <div class="modal-description">
+          <h3>위스키 이야기</h3>
+          <p id="modal-description"></p>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cart-btn" class="modal-cart">
+            장바구니 등록
+          </button>
+          <button type="button" id="wishlist-btn" class="modal-wish" aria-pressed="false">
+            <span aria-hidden="true">♡</span>
+            찜하기
+          </button>
+          <p id="modal-status" class="modal-status" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+  </dialog>
+  <footer class="footer">
+    <div class="container">
+      <p>GOLDEN DROP</p>
+      <p>당신의 취향에 깊이를 더하는 위스키 이야기.</p>
+      <p>&copy; 2026 GOLDEN DROP. 포트폴리오용 위스키 소개 사이트입니다.</p>
+    </div>
+  </footer>
+</body>
+
+</html>

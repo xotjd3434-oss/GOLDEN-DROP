@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="위스키 한 잔에 담긴 깊은 풍미와 이야기. GOLDEN DROP에서 다양한 위스키와 취향에 맞는 가이드를 만나보세요.">
+  <title>GOLDEN DROP | 취향을 담은 한 잔</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <script type="module" src="./js/home.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <nav class="container nav" aria-label="메인 메뉴">
+      <a href="index.html" class="logo">GOLDEN DROP</a>
+      <div class="gnb">
+        <a href="index.html" aria-current="page">HOME</a>
+        <a href="whisky.html">WHISKY</a>
+        <a href="journal.html">JOURNAL</a>
+        <a href="guide.html">GUIDE</a>
+        <span id="account-nav">
+          <a href="login.html">로그인</a>
+        </span>
+      </div>
+    </nav>
+  </header>
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="container">
+      <p class="sub-title">A DROP OF DISTINCTION</p>
+      <h1 id="hero-title">
+        깊어지는 취향,<br>
+        한 잔에 담다.
+      </h1>
+      <p>
+        시간이 빚어낸 풍미와 한 병에 담긴 이야기.<br>
+        GOLDEN DROP에서 당신의 취향을 발견하세요.
+      </p>
+      <a href="whisky.html">위스키 둘러보기 →</a>
+    </div>
+  </section>
+  <main class="container section" aria-labelledby="featured-title">
+    <p class="sub-title">WHISKY COLLECTION</p>
+    <h2 id="featured-title">취향의 시작이 될 한 병</h2>
+    <div id="featured" class="whisky-grid" aria-live="polite">
+      위스키를 불러오는 중...
+    </div>
+    <div class="more-wrap">
+      <button id="more-btn" type="button" hidden>
+        위스키 더보기
+      </button>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="container">
+      <p>GOLDEN DROP</p>
+      <p>당신의 취향에 깊이를 더하는 위스키 이야기.</p>
+      <p>&copy; 2026 GOLDEN DROP. 포트폴리오용 위스키 소개 사이트입니다.</p>
+    </div>
+  </footer>
+  <dialog id="whisky-modal" class="whisky-modal" aria-labelledby="modal-title">
+    <button type="button" id="modal-close" class="modal-close" aria-label="상세 정보 닫기" autofocus>
+      ×
+    </button>
+    <div class="whisky-modal-layout">
+      <div id="modal-image" class="modal-image"></div>
+      <div class="modal-body">
+        <p class="sub-title">WHISKY DETAILS</p>
+        <h2 id="modal-title"></h2>
+        <p id="modal-brand" class="modal-brand"></p>
+        <strong id="modal-price" class="modal-price"></strong>
+        <dl class="modal-specs">
+          <div>
+            <dt>원산지</dt>
+            <dd id="modal-origin"></dd>
+          </div>
+          <div>
+            <dt>분류</dt>
+            <dd id="modal-type"></dd>
+          </div>
+          <div>
+            <dt>용량</dt>
+            <dd id="modal-volume"></dd>
+          </div>
+        </dl>
+        <div class="modal-description">
+          <h3>위스키 이야기</h3>
+          <p id="modal-description"></p>
+        </div>
+        <div class="modal-actions">
+          <button type="button" id="cart-btn" class="modal-cart">
+            장바구니 등록
+          </button>
+          <button type="button" id="wishlist-btn" class="modal-wish" aria-pressed="false">
+            <svg class="heart-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z" />
+            </svg>
+            찜하기
+          </button>
+        </div>
+        <p id="modal-status" class="modal-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </dialog>
+</body>
+
+</html>
