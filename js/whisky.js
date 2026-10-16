@@ -1,6 +1,5 @@
 //whisky.js
 import { supabase, escapeHTML, won } from './common.js';
-import { initWhiskyModal } from './whisky-modal.js';
 const list = document.querySelector('#whisky-list');
 const category = document.querySelector('#category');
 const search = document.querySelector('#search');
@@ -47,9 +46,7 @@ function showGallery() {
       `;
     }
     cards += `
-      <a class="art-card" href="#whisky-modal" role="button"
-        data-whisky-id="${escapeHTML(String(whisky.id))}"
-        aria-haspopup="dialog" aria-controls="whisky-modal">
+      <a class="art-card" href="detail.html?id=${escapeHTML(encodeURIComponent(String(whisky.id)))}">
         <div class="art-image">
           ${image}
         </div>
@@ -121,8 +118,4 @@ if (moreBtn) {
     showGallery();
   });
 }
-//카드 클릭 시 상세 모달, 장바구니, 찜하기 연결
-initWhiskyModal(list, (id) => {
-  return whiskies.find((whisky) => String(whisky.id) === String(id));
-});
 loadGallery(); //처음 한 번 조회
