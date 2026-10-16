@@ -1,10 +1,8 @@
 import { supabase, escapeHTML, won } from './common.js';
-import { initWhiskyModal } from './whisky-modal.js';
 const list = document.querySelector('#featured');
 const moreBtn = document.querySelector('#more-btn');
 const PAGE_SIZE = 10;
 let nextStart = 0;
-const loadedWhiskies = new Map();
 async function loadFeatured() {
   moreBtn.hidden = false;
   moreBtn.disabled = true;
@@ -39,9 +37,8 @@ async function loadFeatured() {
     return;
   }
   data.forEach((whisky) => {
-    loadedWhiskies.set(String(whisky.id), whisky);
     list.insertAdjacentHTML('beforeend', `
-    <a class="art-card" href="#whisky-modal" role="button" data-whisky-id="${escapeHTML(String(whisky.id))}" aria-haspopup="dialog" aria-controls="whisky-modal">
+    <a class="art-card" href="detail.html?id=${escapeHTML(encodeURIComponent(String(whisky.id)))}">
       <div class="art-image">
         ${whisky.image_url
         ? `<img src="${escapeHTML(whisky.image_url)}" alt="${escapeHTML(whisky.title)}" loading="lazy">`
@@ -65,5 +62,4 @@ async function loadFeatured() {
 }
 //버튼을 누르면 다음 10개 조회
 moreBtn.addEventListener('click', loadFeatured);
-initWhiskyModal(list, id => loadedWhiskies.get(id));
 loadFeatured();
